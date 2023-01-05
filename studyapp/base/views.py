@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("Home")
+    return render(request, 'base.html')
 
 
 def room(request):
