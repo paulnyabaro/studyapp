@@ -1,1 +1,12 @@
 {% extends 'base.html' %}
+
+{% block title %}Create or edit room {% endblock %}
+
+{% block content %}
+<div>
+    <form method="post" accept="">
+        {% csrf_token %}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

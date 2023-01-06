@@ -3,6 +3,7 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+    <a href="{% url 'create_room' %}">Create room</a><br>
     {% for room in rooms %}
     <span>@{{ room.host.username }}</span><br>
     <a href="{% url 'room' room.id %}">{{ room.id }}. {{ room.name }}</a><br>
