@@ -10,7 +10,7 @@
     <h1>Home</h1>
     {% block content %}
     {% for room in rooms %}
-    <li>{{ room.name }}</li>
+    <li><a href="{% url 'room' room.id %}">{{ room.name }}</a></li>
     {% endfor %}
     {% endblock %}
 </body>
