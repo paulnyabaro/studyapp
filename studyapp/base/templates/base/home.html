@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study app</title>
-</head>
-<body>
-    <h1>Home</h1>
-    {% block content %}
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
     {% for room in rooms %}
     <span>@{{ room.host.username }}</span><br>
     <a href="{% url 'room' room.id %}">{{ room.id }}. {{ room.name }}</a><br>
     <small>{{ room.topic.name }}</small>
     <hr>
     {% endfor %}
-    {% endblock %}
-</body>
-</html>
+{% endblock %}
