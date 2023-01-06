@@ -7,9 +7,11 @@
     <title>Study app</title>
 </head>
 <body>
-    {% include '/templates/navbar.html' %}
     <h1>Home</h1>
     {% block content %}
+    {% for room in rooms %}
+    <li>{{ room.name }}</li>
+    {% endfor %}
     {% endblock %}
 </body>
 </html>
