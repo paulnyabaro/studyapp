@@ -7,6 +7,9 @@
                     <a href="">Home</a>
                 </li>
             </ul>
+            <form action="{% url 'home' %}" method="GET">
+                <input type="text" name="q" placeholder="Search Rooms..." id="">
+            </form>
         </div>
     </div>
 </nav>
