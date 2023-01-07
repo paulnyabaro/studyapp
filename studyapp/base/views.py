@@ -34,6 +34,10 @@ def update_room(request, pk):
         if form.is_valid():
             form.save()
             return redirect('home')
-            
+
     context = {'form': form}
     return render(request, 'base/room_form.html', context)
+
+
+def delete_room(request, pk):
+    pass
