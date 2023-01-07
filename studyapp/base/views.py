@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Room
+from .forms import RoomForm
 
 def home(request):
     rooms = Room.objects.all()
@@ -15,5 +15,6 @@ def room(request, pk):
 
 
 def create_room(request):
-    context = {}
+    form = RoomForm()
+    context = {'form': form}
     return render(request, 'base/room_form.html', context)

@@ -6,6 +6,7 @@
 <div>
     <form method="post" accept="">
         {% csrf_token %}
+        {{ form.as_p }}
         <button type="submit">Submit</button>
     </form>
 </div>
