@@ -11,7 +11,9 @@ def home(request):
         Q(description__icontains=q))
          # __ means going back to parent, icontains -> the i is used for case insensitivity
     topics = Topic.objects.all()
-    context =  {'rooms': rooms, 'topics': topics}
+    room_count = rooms.count()
+
+    context =  {'rooms': rooms, 'topics': topics, 'room_count': room_count}
     return render(request, 'base/home.html', context)
 
 
