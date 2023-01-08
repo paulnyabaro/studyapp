@@ -36,7 +36,7 @@
             </ul>
         </div>
         <div class="main-content">
-            <h5>{{ room_count }} rooms available</h5>
+            <h5>{{ room_count }} room{{ room_count|pluralize }} available</h5>
             <a href="{% url 'create_room' %}">Create room</a><br>
             {% for room in rooms %}
             <a href="{% url 'update_room' room.id %}">Edit</a>
