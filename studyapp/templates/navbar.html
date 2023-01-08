@@ -1,10 +1,10 @@
 <nav>
     <div class="container">
         <div class="navbar">
-            <a href="">Logo</a>
+            <a href="{% url 'home' %}">Logo</a>
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <a href="{% url 'home' %}">Home</a>
                 </li>
             </ul>
             <form action="{% url 'home' %}" method="GET">
