@@ -52,7 +52,7 @@ def room(request, pk):
     context = {'room': room}
     return render(request, 'base/rooms.html', context)
 
-@login_required(login_required='/login') # Redirects non logged in users
+@login_required(login_url='login') # Redirects non logged in users
 def create_room(request):
     form = RoomForm()
     if request.method == 'POST':
