@@ -5,10 +5,10 @@
 {% block content %}
     <form action="" method="POST">
         {% csrf_token %}
-        <label for="">Username</label>
-        <input type="text" value="username" placeholder="Enter username">
-        <label for="">Password</label>
-        <input type="password" name="" id="">
+        <label for="uname">Username</label>
+        <input type="text" name="username" id="uname" placeholder="Enter username">
+        <label for="pass">Password</label>
+        <input type="password" name="password" id="pass">
         <button type="submit">Login</button>
     </form>
 {% endblock %}
