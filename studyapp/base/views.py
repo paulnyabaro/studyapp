@@ -10,6 +10,9 @@ from .forms import RoomForm
 
 
 def login_page(request):
+    if request.user.is_authenticated:
+        return redirect('home')
+
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password') 
@@ -88,7 +91,7 @@ def delete_room(request, pk):
 
     if request.user != room.host:
         return HttpResponse('You do not have the rights to do that')
-        
+
     if request.method == 'POST':
         room.delete()
         return redirect('home')
