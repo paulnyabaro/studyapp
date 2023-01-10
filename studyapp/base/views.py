@@ -72,8 +72,8 @@ def home(request):
 
 def room(request, pk):
     room = Room.objects.get(id=pk)
-    messages = room.message_set.all() # Querying child models. Models name in lowercase then underscore set (Set of messages related to this room)
-    context = {'room': room, 'messages': messages}
+    room_messages = room.message_set.all() # Querying child models. Models name in lowercase then underscore set (Set of messages related to this room)
+    context = {'room': room, 'room_messages': room_messages}
     return render(request, 'base/rooms.html', context)
 
 @login_required(login_url='login') # Redirects non logged in users
