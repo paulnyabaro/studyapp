@@ -3,6 +3,7 @@
 {% block title %}Register or Login{% endblock %}
 
 {% block content %}
+    {% if page == 'login' %}
     <form action="" method="POST">
         {% csrf_token %}
         <label for="uname">Username</label>
@@ -11,18 +12,17 @@
         <input type="password" name="password" id="pass">
         <button type="submit">Login</button>
         <p>
-            <small>Haven't signed up yet?</small>
-            <a href="{% url 'register' %}">Sign up</a>
+            <small>Haven't signed up yet? <a href="{% url 'register' %}">Sign up</a></small>
         </p>
     </form>
-
+    {% else %}
     <form action="" method="POST">
         {% csrf_token %}
         
         <button type="submit">Register</button>
         <p>
-            <small>Already have an account?</small>
-            <a href="{% url 'login' %}">Sign in</a>
+            <small>Already have an account? <a href="{% url 'login' %}">Sign in</a></small>
         </p>
     </form>
+    {% endif %}
 {% endblock %}
