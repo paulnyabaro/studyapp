@@ -12,7 +12,7 @@ class Room(models.Model):
     topic = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True) # Does not delete topic
     name = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)  
-    # participants = 
+    participants = models.ManyToManyField(User, related_name='participants', blank=True) # We can't have the user because we already have it at the top
     created = models.DateTimeField(auto_now_add=True) # Updates value only once
     updated = models.DateTimeField(auto_now=True) # Updated every time it is saved
 
