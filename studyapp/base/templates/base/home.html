@@ -11,16 +11,7 @@
             <div class="main-content">
                 <h5>{{ room_count }} room{{ room_count|pluralize }} available</h5>
                 <a href="{% url 'create_room' %}">Create room</a><br>
-                {% for room in rooms %}
-                {% if request.user == room.host %}
-                <a href="{% url 'update_room' room.id %}">Edit</a>
-                <a href="{% url 'delete_room' room.id %}">Delete</a>
-                {% endif %}
-                <span>@{{ room.host.username }}</span><br>
-                <a href="{% url 'room' room.id %}">{{ room.id }}. {{ room.name }}</a><br>
-                <small>{{ room.topic.name }}</small>
-                <hr>
-                {% endfor %}
+                {% include 'base/feed_component.html' %}
             </div>
             <div class="recent-activity">
                 {% include 'base/activity_component.html' %}
