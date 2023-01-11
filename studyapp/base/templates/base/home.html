@@ -6,17 +6,7 @@
     <div class="container">
         <div class="home-grid">
             <div class="sidebar">
-                <h4>Browse topics</h4>
-                <ul>
-                    <li>
-                        <a href="{% url 'home' %}">All topics</a>
-                    </li>
-                    {% for topic in topics %}
-                    <li>
-                        <a href="{% url 'home' %}?q={{topic.name}}">{{ topic.name }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
+                {% include 'base/topics_component.html' %}
             </div>
             <div class="main-content">
                 <h5>{{ room_count }} room{{ room_count|pluralize }} available</h5>
