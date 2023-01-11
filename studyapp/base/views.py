@@ -88,6 +88,10 @@ def room(request, pk):
     context = {'room': room, 'room_messages': room_messages, 'participants': participants}
     return render(request, 'base/rooms.html', context)
 
+def user_profile(request):
+    context = {}
+    return render(request, 'base/profile.html', context)
+
 @login_required(login_url='login') # Redirects non logged in users
 def create_room(request):
     form = RoomForm()
