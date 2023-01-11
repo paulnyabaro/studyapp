@@ -90,7 +90,10 @@ def room(request, pk):
 
 def user_profile(request, pk):
     user = User.objects.get(id=pk)
-    context = {'user': user}
+    rooms = user.room_set.all()
+    room_messages = user.message_set.all()
+    topics = Topic.objects.all()
+    context = {'user': user, 'rooms': rooms, 'topics': topics, 'room_messages': room_messages}
     return render(request, 'base/profile.html', context)
 
 @login_required(login_url='login') # Redirects non logged in users

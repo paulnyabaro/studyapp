@@ -5,5 +5,17 @@
 {% block content %}
 <div class="container">
     <h1>{{ user.username }}</h1>
+    <div class="home-grid">
+        <div class="sidebar">
+            {% include 'base/topics_component.html' %}
+        </div>
+        <div class="main-content">
+            <a href="{% url 'create_room' %}">Create room</a><br>
+            {% include 'base/feed_component.html' %}
+        </div>
+        <div class="recent-activity">
+            {% include 'base/activity_component.html' %}
+        </div>
+    </div>
 </div>
 {% endblock %}
