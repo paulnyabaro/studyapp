@@ -6,11 +6,29 @@
 <div class="container">
     <form method="post" accept="">
         {% csrf_token %}
+        <!-- {{ form.as_p }} One way of creating the form -->
+
+        <!-- The second way
         {% for field in form %}
         <br>
         <label for="id_{{ field.name }}">{{ field.label }}</label> <br>
         {{ field }}
-        {% endfor %}
+        {% endfor %} -->
+
+        <!-- The third way  -->
+        <label for="room_topic">Room topic</label>
+        <input type="text" name="topic" required list="topic-list">
+        <datalist id="topic-list">
+            <select name="" id="room-topic">
+                <option value="Python">Python</option>
+                <option value="Python">Python</option>
+            </select>
+        </datalist>
+        <label for="room_name">Room name</label>
+        {{ form.name }}
+        <br>
+        <label for="room_description">Room description</label>
+        {{ form.description }}
         <br>
         <button type="submit">Submit</button>
     </form>
