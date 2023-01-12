@@ -8,7 +8,7 @@
         {% csrf_token %}
         {% for field in form %}
         <br>
-        <label for="field">{{ field.label }}</label> <br>
+        <label for="id_{{ field.name }}">{{ field.label }}</label> <br>
         {{ field }}
         {% endfor %}
         <br>
