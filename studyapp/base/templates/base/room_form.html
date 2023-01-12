@@ -6,7 +6,6 @@
 <div class="container">
     <form method="post" accept="">
         {% csrf_token %}
-        {{ form.as_p }}
         {% for field in form %}
         <br>
         <label for="field">{{ field.label }}</label> <br>
