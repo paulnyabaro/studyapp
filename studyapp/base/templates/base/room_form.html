@@ -8,9 +8,11 @@
         {% csrf_token %}
         {{ form.as_p }}
         {% for field in form %}
-        <label for="field">{{ field.label }}</label>
+        <br>
+        <label for="field">{{ field.label }}</label> <br>
         {{ field }}
         {% endfor %}
+        <br>
         <button type="submit">Submit</button>
     </form>
 </div>
