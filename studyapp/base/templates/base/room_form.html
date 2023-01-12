@@ -20,8 +20,9 @@
         <input type="text" name="topic" required list="topic-list">
         <datalist id="topic-list">
             <select name="" id="room-topic">
-                <option value="Python">Python</option>
-                <option value="Python">Python</option>
+                {% for topic in topics %}
+                <option value="{{ topic }}">{{ topic.title }}</option>
+                {% endfor %}
             </select>
         </datalist>
         <label for="room_name">Room name</label>
