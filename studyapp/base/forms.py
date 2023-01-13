@@ -11,4 +11,5 @@ class RoomForm(ModelForm):
 
 class UserForm(ModelForm):
     class Meta:
-        model = ['username', 'email'] # The fields you want to be output
+        model = User
+        fields = ['username', 'email'] # The fields you want to be output
