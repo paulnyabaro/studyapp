@@ -185,5 +185,6 @@ def update_user(request):
 
 
 def topics_page(request):
-    context = {}
+    topics = Topic.objects.filter()
+    context = {'topics': topics}
     return render(request, 'base/topics_page.html', context)
