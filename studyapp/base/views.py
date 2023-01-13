@@ -115,7 +115,7 @@ def create_room(request):
         #     room = form.save(commit=False)
         #     room.host = request.user # Setting the host to the logged in use
         #     room.save()
-            return redirect('home')
+        return redirect('home')
 
     context = {'form': form, 'topics': topics}
     return render(request, 'base/room_form.html', context)
