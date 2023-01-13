@@ -16,8 +16,8 @@
         {% endfor %} -->
 
         <!-- The third way  -->
-        <label for="room_topic">Room topic</label>
-        <input type="text" name="topic" required list="topic-list">
+        <label for="room_topic">Topic</label>
+        <input type="text" name="topic" value="{{ room.topic.name }}" required list="topic-list">
         <datalist id="topic-list">
             <select name="" id="room-topic">
                 {% for topic in topics %}
