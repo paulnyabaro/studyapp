@@ -1,5 +1,6 @@
 <h3>Recent activities</h3>
 <hr>
+{% if room_messages %}
 {% for message in room_messages %}
 <div>
     <small><a href="{% url 'user_profile' message.user.id %}">@{{ message.user }}</a> {{ message.created|timesince }}</small>
@@ -12,3 +13,7 @@
 <hr>
 <br>
 {% endfor %}
+{% else %}
+<p>No recent activities yet</p>
+{% endif %}
+<a href="{% url 'activity' %}">View all</a>
