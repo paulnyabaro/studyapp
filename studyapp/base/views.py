@@ -189,3 +189,8 @@ def topics_page(request):
     topics = Topic.objects.filter(name__icontains=q)
     context = {'topics': topics}
     return render(request, 'base/topics_page.html', context)
+
+
+def activity_page(request):
+    context = {}
+    return render(request, 'base/activity_page.html', context)
