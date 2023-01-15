@@ -63,7 +63,7 @@ def home(request):
         Q(name__icontains=q) | 
         Q(description__icontains=q))
          # __ means going back to parent, icontains -> the i is used for case insensitivity
-    topics = Topic.objects.all()
+    topics = Topic.objects.all()[0:5] # Getting the first 5 elements
     room_count = rooms.count()
     room_messages = Message.objects.filter(Q(room__topic__name__icontains=q)) # Filtering recent activities based on topic
 
