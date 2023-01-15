@@ -5,5 +5,18 @@
 {% block content %}
 <div class="container">
     <h1>All topics</h1>
+    <form action="{% url 'home' %}" method="GET">
+        <input type="text" name="q" placeholder="Search here...">
+    </form>
+    <ul>
+        <li>
+            <a href="{% url 'home' %}">All topics <span>{{ topics.count }}</a>
+        </li>
+        {% for topic in topics %}
+        <li>
+            <a href="{% url 'home' %}?q={{topic.name}}">{{ topic.name }} <span>{{ topic.room_set.all.count }}</span></a>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 {% endblock %}
