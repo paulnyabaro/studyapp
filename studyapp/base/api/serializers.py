@@ -1,0 +1,1 @@
+# Takes in an object from response in vies and serializes it
