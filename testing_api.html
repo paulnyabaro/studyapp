@@ -7,6 +7,15 @@
     <title>Testing the API</title>
 </head>
 <body>
-    
+    <h1>Cools rooms</h1>
+    <div id="rooms"></div>
+
+
+    <script>
+        let GetRooms = async () => {
+            let response = await fetch('http://127.0.0.1:8000/api/rooms/')
+            console.log('RESPONSE:', response)
+        }
+    </script>
 </body>
 </html>
