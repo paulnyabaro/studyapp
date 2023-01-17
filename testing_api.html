@@ -12,10 +12,11 @@
 
 
     <script>
-        let GetRooms = async () => {
+        let getRooms = async () => {
             let response = await fetch('http://127.0.0.1:8000/api/rooms/')
-            console.log('RESPONSE:', response)
+            console.log('RESPONSE:', response);
         }
+        getRooms()
     </script>
 </body>
 </html>
