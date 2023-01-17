@@ -135,3 +135,17 @@ STATICFILES_DIRS = [  # Registering static files
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Allow specific origins
+# CORS_ALLOWED_ORIGINS = [
+#     'https://example.com',
+#     'http://localhost:8080',
+# ]
+
+# Allow origins with specific format
+# CORS_ALLOWED_ORIGINS_REGEX = [
+#     r'^https://\w+\.example\.com$',
+# ]
+
+# Allow all
+CORS_ALLOW_ALL_ORIGINS = True
