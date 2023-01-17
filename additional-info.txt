@@ -1,1 +1,2 @@
 # Install django-cors-headers to handle cors issues
+python -m pip install django-cors-headers
