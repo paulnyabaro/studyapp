@@ -6,7 +6,8 @@
 <div class="container">
     <h1>Update user</h1>
 
-    <form action="" method="POST">
+    <form action="" method="POST" enctype="multipart/form-data"> 
+        <!-- enctype is used to tell the form that we are submitting files not just content -->
         {% csrf_token %}
         {% for field in form %}
         <label for="{{ field.name }}">{{ field.label }}</label>
