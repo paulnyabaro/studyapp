@@ -4,6 +4,7 @@ from django.contrib.auth.models import AbstractUser
 
 # Defining custom user not the default one
 class User(AbstractUser):
+    pass
 
 
 # class Topic(models.Model):

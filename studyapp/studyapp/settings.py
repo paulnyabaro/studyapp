@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
+# For adding the custom user replacing the default django user
+AUTH_USER_MODEL = 'base.User'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 
