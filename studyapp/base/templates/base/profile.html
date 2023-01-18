@@ -5,8 +5,13 @@
 {% block content %}
 <div class="container">
     <h1>{{ user.username }}</h1>
-    <small>@{{ user.username }}</small>
+    <small>@{{ user.username }}</small> <br>
+    <img src="{{ user.avatar.url }}" style="width: 100px; height:100px; border-radius:50%" alt="">
+    <br>
+    <h5>Bio</h5>
+    <p>{{ user.bio }}</p>
     {% if request.user == user %}
+    
     <a href="{% url 'update_user' %}">Edit profile</a>
     {% endif %}
     <div class="home-grid">
