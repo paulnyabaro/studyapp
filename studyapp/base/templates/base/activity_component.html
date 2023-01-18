@@ -4,6 +4,9 @@
 {% for message in room_messages %}
 <div>
     <small><a href="{% url 'user_profile' message.user.id %}">@{{ message.user.name }}</a> {{ message.created|timesince }}</small>
+    <br>
+    <img src="{{ message.user.avatar.url }}" style="width: 20px; height:20px; border-radius:50%" alt="">
+    <br>
     <small>Replied to "{{ message.room }}"</small> <br><br>
     {{ message.body }}
     {% if request.user == message.user %}
