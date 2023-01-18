@@ -14,8 +14,8 @@
                     {% endif %}
             </ul>
             {% if request.user.is_authenticated %}
-            <p>Hello {{ request.user }}</p>
-            <a href="{% url 'update_user' %}">@{{ request.user }}</a>
+            <p>Hello {{ request.user.name }}</p>
+            <a href="{% url 'update_user' %}">@{{ request.user.name }}</a>
             <ul>
                 <li>
                     <a href="#">Settings</a>
