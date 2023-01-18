@@ -3,6 +3,13 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import Room, User
 
 
+# Custom user creation form
+class MyUserCreationForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ['name', 'username', 'email', 'password1', 'password2'] # Default for password are password1 and password2 for pass confirm
+
+
 class RoomForm(ModelForm):
     class Meta:
         model = Room
