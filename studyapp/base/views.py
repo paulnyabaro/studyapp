@@ -175,7 +175,7 @@ def update_user(request):
     form = UserForm(instance=user)
 
     if request.method == 'POST':
-        form = UserForm(request.POST, instance=user)
+        form = UserForm(request.POST, request.FILES, instance=user) # Request.files includes the file send from frontend
         if form.is_valid():
             form.save()
             return redirect('user_profile', pk=user.id)
