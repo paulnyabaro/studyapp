@@ -1,5 +1,12 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --dark-1:#3f4156;
+    --dark-2:#2d2d39;
+    --light-1:#e5e5e5;
+    --light-2:#696d97;
+    --blue-1:#71c6dd;
+}
 *{
     padding: 0;
     margin: 0;
@@ -8,12 +15,20 @@
 html{
     font-family: 'Inter', sans-serif;
 }
+body{
+    background-color: var(--dark-2);
+    color: var(--light-1);
+}
 a{
     text-decoration: none;
 }
-nav{
-    background-color: silver;
+nav.top-nav{
+    background-color: var(--dark-1);
     padding: 0.5rem 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
 }
 .menu{
     display: flex;
@@ -23,10 +38,7 @@ nav{
     margin: 0.25rem 0 0.25rem 1.5rem;
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-}
+
 .container{
     max-width: 1000px;
     margin: 0 auto;

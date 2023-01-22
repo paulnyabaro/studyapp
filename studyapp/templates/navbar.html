@@ -1,7 +1,7 @@
-<nav>
+<nav class="top-nav">
     <div class="container">
         <div class="navbar">
-            <a href="{% url 'home' %}">Logo</a>
+            <a href="{% url 'home' %}" class="logo">Logo</a>
             <form action="{% url 'home' %}" method="GET">
                 <i class="bi bi-search"></i>
                 <input type="text" name="q" placeholder="Search Rooms..." id="">
