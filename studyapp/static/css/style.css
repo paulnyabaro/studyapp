@@ -37,7 +37,16 @@ nav.top-nav{
 .menu li{
     margin: 0.25rem 0 0.25rem 1.5rem;
 }
-
+.navbar-form{
+    background-color: var(--dark-2);
+    padding: 0.5rem 1rem;
+}
+.navbar-form input{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    outline: none;
+}
 
 .container{
     max-width: 1000px;
