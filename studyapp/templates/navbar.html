@@ -2,7 +2,11 @@
     <div class="container">
         <div class="navbar">
             <a href="{% url 'home' %}">Logo</a>
-            <ul>
+            <form action="{% url 'home' %}" method="GET">
+                <i class="bi bi-search"></i>
+                <input type="text" name="q" placeholder="Search Rooms..." id="">
+            </form>
+            <ul class="menu">
                 <li>
                     <a href="{% url 'home' %}">Home</a>
                 </li>
@@ -13,6 +17,7 @@
                 </li>
                     {% endif %}
             </ul>
+            
             {% if request.user.is_authenticated %}
             <img src="{{ user.avatar.url }}" style="width: 100px; height:100px; border-radius:50%" alt="">
             <p>Hello {{ request.user.name }}</p>
@@ -26,9 +31,7 @@
                 </li>
             </ul>
             {% endif %}
-            <form action="{% url 'home' %}" method="GET">
-                <input type="text" name="q" placeholder="Search Rooms..." id="">
-            </form>
+            
         </div>
     </div>
 </nav>
