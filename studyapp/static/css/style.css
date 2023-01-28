@@ -113,3 +113,8 @@ hr{
     border-radius: var(--card-br);
     margin: 0 1rem;
 }
+.avatar{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
