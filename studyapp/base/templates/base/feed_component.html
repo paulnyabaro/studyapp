@@ -3,15 +3,16 @@
     <div>
         <a href="{% url 'room' room.id %}" class="room-title">{{ room.id }}. {{ room.name }}</a>
         
-        <div class="flex a-center mb-2 op-2">
-            <small>{{ room.created|timesince }} ago</small>
-            <small>Hosted by<a href="{% url 'user_profile' room.host.id %}">
+        <div class="flex a-center mb-2">
+            <small>
+                <span class="mr-1 op-2">{{ room.created|timesince }} ago,</span>
+                Hosted by<a href="{% url 'user_profile' room.host.id %}">
                 @{{ room.host.username }}</a>
             </small>
             <small>
                 {% if request.user == room.host %}
-                <a href="{% url 'update_room' room.id %}">Edit</a>
-                <a href="{% url 'delete_room' room.id %}">Delete</a>
+                <a href="{% url 'update_room' room.id %}" class="btn btn-sm btn-light mr-1">Edit</a>
+                <a href="{% url 'delete_room' room.id %}" class="btn btn-sm btn-danger">Delete</a>
                 {% endif %}
             </small>
             
