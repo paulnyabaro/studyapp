@@ -19,7 +19,7 @@
             </ul>
             
             {% if request.user.is_authenticated %}
-            <img src="{{ user.avatar.url }}" style="width: 100px; height:100px; border-radius:50%" alt="">
+            <img src="{{ user.avatar.url }}" style="width: 30px; height:30px; border-radius:50%" alt="">
             <p>Hello {{ request.user.name }}</p>
             <a href="{% url 'update_user' %}">@{{ request.user.name }}</a>
             <ul>
