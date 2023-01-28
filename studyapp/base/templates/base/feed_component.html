@@ -1,4 +1,4 @@
-<div>
+<div class="room-box">
     {% for room in rooms %}
     {% if request.user == room.host %}
     <a href="{% url 'update_room' room.id %}">Edit</a>
