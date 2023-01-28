@@ -27,6 +27,9 @@ a{
     text-decoration: none;
     color: var(--light-2);
 }
+a:not(.btn):hover{
+    color: var(--light-1);
+}
 nav.top-nav{
     background-color: var(--dark-1);
     padding: 0.5rem 0;
