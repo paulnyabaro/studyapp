@@ -22,6 +22,7 @@ body{
 }
 a{
     text-decoration: none;
+    color: var(--light-2);
 }
 nav.top-nav{
     background-color: var(--dark-1);
@@ -74,6 +75,26 @@ nav.top-nav{
     max-width: 1000px;
     margin: 0 auto;
     padding: 0.5rem 0;
+}
+hr{
+    margin: 0.75rem 0;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.a-center{
+    align-items: center;
+}
+.btn{
+    display: inline-block;
+    padding: 0.35rem 0.5rem 0.4rem;
+    font-size: .9rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+}
+.btn-light{
+    background-color: var(--light-1);
 }
 .home-grid{
     display: grid;
