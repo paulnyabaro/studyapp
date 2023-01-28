@@ -30,6 +30,9 @@ nav.top-nav{
     display: flex;
     justify-content: space-between;
 }
+.navbar a{
+    color: var(--light-1);
+}
 .menu{
     display: flex;
     list-style: none;
@@ -40,6 +43,7 @@ nav.top-nav{
 .navbar-form{
     background-color: var(--dark-2);
     padding: 0.5rem 1rem;
+    position: relative;
 }
 .navbar-form input{
     background-color: transparent;
@@ -47,6 +51,15 @@ nav.top-nav{
     width: 100%;
     outline: none;
     box-shadow: none;
+    padding-left: 1rem;
+}
+.navbar-form i{
+    position: absolute;
+    font-size: 0.8rem;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--light-2);
 }
 
 .container{
