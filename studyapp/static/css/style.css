@@ -181,3 +181,11 @@ hr{
     display: flex;
     gap: 0.5rem;
 }
+.profile-flex p{
+    line-height: 1.1;
+}
+.profile-flex small{
+    font-size: 0.65rem;
+    display: block;
+    opacity: 0.5;
+}
