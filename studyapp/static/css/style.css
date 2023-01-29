@@ -189,3 +189,21 @@ hr{
     display: block;
     opacity: 0.5;
 }
+.auth-menu{
+    position: relative;
+    cursor: pointer;
+}
+.auth-menu::before{
+    content: '';
+    height: 0.5rem;
+    width: 0.5rem;
+    border-bottom:1px solid var(--light-1);
+    border-right:1px solid var(--light-1);
+    position: absolute;
+    right: -1.5rem;
+    top: calc(50% - 0.25rem);
+    transform: translateY(-50%) rotate(45deg);
+}
+.auth-menu ul{
+    position: absolute;
+}
