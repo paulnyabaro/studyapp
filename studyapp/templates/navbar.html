@@ -18,7 +18,8 @@
                     {% endif %}
             </ul>
             
-            {% if request.user.is_authenticated %}
+            <div class="auth-menu">
+                {% if request.user.is_authenticated %}
             <img src="{{ user.avatar.url }}" class="avatar" alt="">
             <p>Hello {{ request.user.name }}</p>
             <a href="{% url 'update_user' %}">@{{ request.user.name }}</a>
@@ -31,6 +32,7 @@
                 </li>
             </ul>
             {% endif %}
+            </div>
             
         </div>
     </div>
