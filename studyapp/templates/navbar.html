@@ -20,12 +20,16 @@
             
             <div class="auth-menu">
                 {% if request.user.is_authenticated %}
-            <img src="{{ user.avatar.url }}" class="avatar" alt="">
-            <p>Hello {{ request.user.name }}</p>
-            <a href="{% url 'update_user' %}">@{{ request.user.name }}</a>
+                <div class="profile-flex">
+                    <img src="{{ user.avatar.url }}" class="avatar" alt="">
+                    <span>
+                        <p>Hello {{ request.user.name }}</p>
+                        <small>@{{ request.user.name }}</small>
+                    </span>
+                </div>
             <ul>
                 <li>
-                    <a href="#">Settings</a>
+                    <a href="{% url 'user_profile' user.id %}">Settings</a>
                 </li>
                 <li>
                     <a href="{% url 'logout' %}">Logout</a>
